@@ -24,5 +24,11 @@ inicio
              fimse
         fimse
    fimse
+   
+   //Nesse caso: se (lado1 > lado2 + lado3) OU (lado2 > lado1 + lado3) OU (lado3 > lado1 + lado2) entao
+   //quando o programa lê os dois primeiros blocos, ele já julga em V ou F, não chegando a processar a terceira condição.
+   //Isso torna desnecessário escrevê-lo, ficando então:
+   //se (lado1 > lado2 + lado3) OU (lado2 > lado1 + lado3) entao
+   //Essa regra também serve para o E.
 
 fimalgoritmo
