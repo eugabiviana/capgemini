@@ -24,16 +24,18 @@ inicio
   // fimpara
   
 //A RESOLUÇÃO:
+    escreval("Ordem crescente:")
     para i de 1 ate 10 faca
          escreval("Numero ",i)
     fimpara
     
     aux <- 11
     
+    escreval(" ")
+    escreval("Ordem decrescente:")
     para i de 1 ate 10 faca
          vetorDecr[aux - 1] <- vetorCres[i]
-         vetorCres[i] <- vetorDecr[i]
-         escreval(vetorCres[i])
+         escreval("Número", aux - i)
     fimpara
   
 fimalgoritmo
