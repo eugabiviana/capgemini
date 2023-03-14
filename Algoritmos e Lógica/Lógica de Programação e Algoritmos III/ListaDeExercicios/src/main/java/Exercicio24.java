@@ -13,8 +13,7 @@ public class Exercicio24 {
             System.out.println("Digite um número: ");
             int num = leia.nextInt();
 
-            if (num == 0)
-            {
+            if (num == 0){
                 System.out.println("O número é igual a 0!");
             }else {
                 if (num > 0) {
