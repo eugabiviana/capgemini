@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         //criando uma variável não-primitiva:
-        Pessoa objetoPessoa = new Pessoa(); //guardo na VARIÁVEL objetoPessoas as infos de Pessoa
+        Pessoa objetoPessoa = new Pessoa(70.0f, 1.70f); //guardo na VARIÁVEL objetoPessoas as infos de Pessoa
         Scanner leia = new Scanner(System.in);
 
         System.out.println("Digite o peso da pessoa:");
@@ -18,3 +18,4 @@ public class Main {
         System.out.println("IMC = " + objetoPessoa.calcularIMC());
     }
 }
+//dentro dos parênteses tenho PARÂMETROS.

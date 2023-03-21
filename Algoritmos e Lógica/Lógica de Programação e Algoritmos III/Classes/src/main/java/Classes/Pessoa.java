@@ -3,8 +3,15 @@ package Classes;
 public class Pessoa {
 
     //atributos
-    private float peso;
+    private float peso; //<- atributo
     private float altura;
+
+    //Construtor -> serve para inserir o valor do parâmetro ao atributo peso/altura
+    public Pessoa(float peso, float altura){
+        this.peso = peso; //<-parâmetro
+        this.altura = altura;
+    }
+
 
     //métodos (sempre colocar o nome dos métodos no infinitivo)
     public float calcularIMC(){
