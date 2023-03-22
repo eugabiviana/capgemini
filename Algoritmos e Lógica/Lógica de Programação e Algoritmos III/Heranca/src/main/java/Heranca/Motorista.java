@@ -1,10 +1,9 @@
 package Heranca;
 
-import java.util.Date;
 
-public class Motorista {
+public class Motorista extends Funcionario{
 
-    private
+
 
     //Constructor
     public Motorista() {
