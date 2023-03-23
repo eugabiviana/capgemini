@@ -14,13 +14,17 @@ public class Exercicio20 {
         float valorVeiculo = 0.0f;
         float porcentagemDesconto = 0.0f;
         float valorDesconto = 0.0f;
+        float valorPagar = 0.0f;
+
+        int totalCarrosSemiNovos = 0;
+        int totalCarros = 0;
 
 
         Scanner leia = new Scanner(System.in);
 
-        boolean desejaRepetir = true;
+        char desejaRepetir = 's';
 
-        while (desejaRepetir == true){
+        while (desejaRepetir == 's' || desejaRepetir == 'S'){
 
             System.out.println("Digite o ano de fabricação do carro:");
             anoFabricacao = leia.nextInt();
@@ -29,17 +33,24 @@ public class Exercicio20 {
 
             if (anoFabricacao <= 2000){
                 porcentagemDesconto = 0.12f;
-                valorVeiculo = valorVeiculo - (valorVeiculo * porcentagemDesconto);
             } else {
                 porcentagemDesconto = 0.07f;
-                valorVeiculo = valorVeiculo - (valorVeiculo * porcentagemDesconto);
+                totalCarrosSemiNovos++;
             }
+            totalCarros++;
+
+            valorDesconto = valorVeiculo * porcentagemDesconto;
+            valorPagar = valorVeiculo - valorDesconto;
+
+            System.out.println("O valor do desconto foi de R$" + valorDesconto);
+            System.out.println("O valor a ser pago será de R$" + valorPagar);
 
             System.out.println("Deseja fazer mais cadastro? S - Sim/ N - Não");
+            desejaRepetir = leia.next().charAt(0); //aqui ele lê só a primeira letra digitada
 
         }
 
-        System.out.println("O valor final do veículo de ano " + anoFabricacao + ", com desconto de "
-                + porcentagemDesconto + "%, é de: R$" + valorVeiculo + ".");
+        System.out.println("O total de carros semi novos: " + totalCarrosSemiNovos);
+        System.out.println("O total de carros cadastrados: " + totalCarros);
     }
 }
